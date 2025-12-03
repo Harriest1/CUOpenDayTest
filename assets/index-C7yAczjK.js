@@ -19,7 +19,7 @@
           <img src="${o}" alt="Cardiff University Logo" class="h-16 w-auto" />
         </a>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-bold text-cardiff-red mb-8 text-center">Cardiff University Open Day</h1>
+      <h1 class="text-3xl sm:text-5xl font-bold text-cardiff-red mb-8 text-center">Cardiff University Open Day - test</h1>
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         ${i.topics.map(t=>t&&t.name?`
           <div class="bg-cardiff-grey rounded-lg shadow p-6 flex flex-col">
