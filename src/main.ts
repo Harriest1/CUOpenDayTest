@@ -34,16 +34,49 @@ function renderOpenDay(data: any) {
         </a>
       </div>
     </div>
-    <div class="min-h-screen bg-cardiff-white font-sans px-2 py-6">
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-        <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer">
-          <img src="${cuLogo}" alt="Cardiff University Logo" class="h-16 w-auto" />
-        </a>
+    <section id="top-nav">
+    <nav class="w-full bg-gray-800 px-10 py-5">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-sm">
+        <div class="flex items-center gap-4">
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-white">Teaching excellence</a>
+          <a href="#" class="text-white">Alumni</a>
+          <a href="#" class="text-white">Donate</a>
+          <a href="#" class="text-white">News</a>
+          <a href="#" class="text-white">Events</a>
+          <a href="#" class="text-white">Search</a>
+        </div>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-bold text-cardiff-red mb-8 text-center">Cardiff University Open Day - test</h1>
+    </nav>
+    </section>
+    <section id="main-nav">
+    <nav class="w-full bg-white border-b border-gray-200 px-4 py-10">
+      <div class="max-w-7xl mx-auto flex items-left gap-10 text-lg">
+        <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="${cuLogo}" alt="Cardiff University Logo" class="h-12 w-auto" />
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-lg">
+          <a href="#" class="text-black">Study</a>
+          <a href="#" class="text-black">Research</a>
+          <a href="#" class="text-black">Work with us</a>
+          <a href="#" class="text-black">Community</a>
+          <a href="#" class="text-black">Global</a>
+          <a href="#" class="text-black">About</a>
+        </div>
+      </div>
+    </nav>
+    </section>
+    <div class="min-h-screen bg-cardiff-white font-sans px-2 py-6">
+    <section id="main-banner" class="w-full bg-cardiff-red text-white py-10 px-5 text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Open Day Events</h1>
+      <p class="text-lg sm:text-xl max-w-2xl mx-auto">Explore a range of events for Schools and more to learn all about what we can offer you.</p>
+    </section>
+    <br>
+    <ul class="list-disc list-inside text-cardiff-dark text-sm space-y-1">
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         ${data.topics.map((topic: any) => topic && topic.name ? `
-          <div class="bg-cardiff-grey rounded-lg shadow p-6 flex flex-col">
+          <div class="bg-cardiff-light rounded-lg shadow p-6 flex flex-col">
             <img src="${topic.cover_image || cuLogo}" alt="${topic.name}" class="h-32 w-full object-cover rounded mb-4" />
             <h2 class="text-xl font-bold text-cardiff-red mb-2">${topic.name}</h2>
             <p class="text-cardiff-dark mb-2">${topic.description || ''}</p>
