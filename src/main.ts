@@ -48,7 +48,7 @@ function renderOpenDay(data: any) {
 
     <section id="top-nav">
       <nav class="w-full bg-gray-800 px-10 py-5" aria-label="Utility navigation">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-sm">
+        <div class="w-full flex flex-wrap items-center justify-between gap-2 text-sm">
           <div class="flex items-center gap-4"></div>
           <div class="flex items-center gap-4">
             <a href="#" class="text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cardiff-red rounded">Teaching excellence</a>
@@ -63,12 +63,12 @@ function renderOpenDay(data: any) {
     </section>
 
     <section id="main-nav">
-      <nav class="w-full bg-white border-b border-gray-200 px-4 py-10" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto flex items-left gap-10 text-lg">
+      <nav class="w-full bg-white border-b border-gray-200 py-10" aria-label="Main navigation">
+        <div class="w-full mx-auto flex flex-col md:flex-row md:items-center gap-10 text-lg">
           <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer" aria-label="Cardiff University homepage">
             <img src="${cuLogo}" alt="Cardiff University Logo" class="h-20 w-auto" />
           </a>
-          <div class="hidden md:flex items-center gap-6 text-lg">
+          <div class="flex flex-wrap items-center gap-10 text-lg">
             <a href="#" class="text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-cardiff-red rounded">Study</a>
             <a href="#" class="text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-cardiff-red rounded">Research</a>
             <a href="#" class="text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-cardiff-red rounded">Work with us</a>
@@ -80,13 +80,13 @@ function renderOpenDay(data: any) {
       </nav>
     </section>
 
-    <div class="min-h-screen bg-cardiff-white font-sans px-2 py-6">
+    <div class="min-h-screen bg-cardiff-white font-sans py-5">
 
     <section id="main-banner" aria-label="Main banner and filter search" class="w-full bg-cardiff-red text-white py-10 px-5 text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Open Day Events</h1>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-5">Open Day Events</h1>
       <p class="text-lg sm:text-xl max-w-2xl mx-auto mb-6">
         Explore a range of events for Schools and more to learn all about what we can offer you.</p>
-      <div class="bg-white rounded-xl shadow-md max-w-xl mx-auto p-4">
+      <div class="bg-white rounded-xl shadow-md max-w-xl mx-auto p-3">
         <label>
         <input id="topic-filter" aria-label="search bar" type="text" name = "filter" placeholder="Search a topic (ie. chemistry)..." oninput="filterTopics()"
           class="w-full p-2 border border-grey-300 rounded-md text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cardiff-red"/>
@@ -96,7 +96,7 @@ function renderOpenDay(data: any) {
     <br>
 
     <section id="event-cards" aria-label="events by topic">
-      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         ${data.topics.map((topic: any) => topic && topic.name ? `
           <div class="bg-cardiff-light rounded-lg shadow p-6 flex flex-col"
             data-topic-card
