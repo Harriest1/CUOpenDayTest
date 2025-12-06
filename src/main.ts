@@ -13,7 +13,7 @@ async function loadOpenDay() {
 }
 
 // Filter topics against their names
-;(window as any).filterTopics = function () {
+(window as any).filterTopics = function () {
   const input = (document.getElementById("topic-filter") as HTMLInputElement).value.toLowerCase();
   const cards = document.querySelectorAll("[data-topic-card]");
 
@@ -47,7 +47,7 @@ function renderOpenDay(data: any) {
     </div>
 
     <section id="top-nav">
-      <nav class="w-full bg-gray-800 px-10 py-5" aria-label="Utility navigation">
+      <nav class="w-full bg-cardiff-dark px-10 py-5" aria-label="Utility navigation">
         <div class="w-full flex flex-wrap items-center justify-between gap-2 text-sm">
           <div class="flex items-center gap-4"></div>
           <div class="flex items-center gap-4">
@@ -96,7 +96,7 @@ function renderOpenDay(data: any) {
     <br>
 
     <section id="event-cards" aria-label="events by topic">
-      <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="grid gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         ${data.topics.map((topic: any) => topic && topic.name ? `
           <div class="bg-cardiff-light rounded-lg shadow p-6 flex flex-col"
             data-topic-card
