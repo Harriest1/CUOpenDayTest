@@ -15,7 +15,7 @@ Further accessibility can be developed by using semantic HTML to improve screen 
 ### Improved Responsiveness
 The page should function across devices and adapt to mobile/tablet/desktop screen sizes via CSS queries. 
 
-##Implementations
+## Implementations
 
 ### CU Branding
 Branding was implemented by designing two nav bars in the style of the main site, and using a large red banner against a light backdrop with the provided colour scheme to give a distinct contrast.
